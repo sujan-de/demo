@@ -1,0 +1,12 @@
+<div>
+  <%= link_to 'All events', events_path %>
+  <%= link_to 'Your events', events_preview_user_path(@user) %>
+</div>
+<div>
+  <p>Create a new event</p>
+  <%= form_for @event, url: {controller: "events", action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <%= f.text_area :message, size: "60x2" %>
+    <%= f.hidden_field :user_id, size: "60x2" %>
+    <%= f.submit "Create" %>
+  <% end %>
+</div>

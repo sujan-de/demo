@@ -1,0 +1,10 @@
+<%= render @event %>
+<button id="add_comment">Add comment</button>
+<div id="comment_box" style="display: none">
+  <%= form_for @comment, url: {controller: "comments", action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <%= f.text_area :message, size: "60x2" %>
+    <%= f.hidden_field :user_id, size: "60x2" %>
+    <%= f.hidden_field :event_id, size: "60x2" %>
+    <%= f.submit "Create" %>
+  <% end %>
+</div>
