@@ -1,5 +1,6 @@
 <div>
     <p><%= event.created_at.to_formatted_s(:short) %>: <%= event.message %> created_by <%= event.user.name %></p>
+    <%= link_to 'Show Event', event_path(event) if params[:action] == "index" %>
     <ul id="comments_list_<%= event.id %>">
       <% event.comments.each do |comment| %>
         <li><%= comment.message %> created by <%= comment.user.name %></li>

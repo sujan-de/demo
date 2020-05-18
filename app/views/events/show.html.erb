@@ -8,3 +8,12 @@
     <%= f.submit "Create" %>
   <% end %>
 </div>
+
+<% content_for :javascript do %>
+  <script type='text/javascript'>
+    document.getElementById('add_comment').onclick = function changeContent() {
+      document.getElementById('comment_box').style = "display: visible";
+      // document.getElementById('demo').style = "Color: red";
+    }
+  </script>
+<% end %>

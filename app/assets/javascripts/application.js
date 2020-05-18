@@ -20,11 +20,11 @@
 //= require jquery_ujs
 //= require bootstrap/dropdown
 //= require turbolinks
-window.onload = function(){
-  document.getElementById('add_comment').onclick = function changeContent() {
+// window.onload = function(){
+//   document.getElementById('add_comment').onclick = function changeContent() {
 
-    document.getElementById('comment_box').style = "display: visible";
-    // document.getElementById('demo').style = "Color: red";
+//     document.getElementById('comment_box').style = "display: visible";
+//     // document.getElementById('demo').style = "Color: red";
 
-  }
-}
+//   }
+// }
